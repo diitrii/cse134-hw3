@@ -1,0 +1,42 @@
+/* https://treecheese.netlify.app/ */
+:root {
+    --first-color: #ffb400;
+    --second-color: #fff1d7;
+    --third-color: #bb3e00;
+    --root-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --base-spacing: 3rem;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+[lang="en"] {
+    quotes: '"' '"' "'" "'";
+}
+
+body {
+    font-family: var(--root-font);
+    color: var(--first-color);
+    background-color: var(--second-color);
+    line-height: var(--base-spacing);
+}
+
+#warning {
+    background-color: var(--third-color);
+    padding: 5%;
+}
+
+#attributed {
+    line-height: .25em;
+    padding: 1em;
+}
+
+.quote::before {
+    content: "\2014"
+}
+
+[type="text"] {
+    outline: 4rem #7b6f19;
+}
