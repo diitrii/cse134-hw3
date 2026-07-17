@@ -2,9 +2,8 @@
 :root {
     --first-color: #ffb400;
     --second-color: #fff1d7;
-    --third-color: #bb3e00;
-    --root-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --base-spacing: 3rem;
+    --base-spacing: 1.5rem;
+    --goofy-font: 'Comic Sans MS'
 }
 
 * {
@@ -17,15 +16,72 @@
 }
 
 body {
-    font-family: var(--root-font);
-    color: var(--first-color);
-    background-color: var(--second-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #fdf6e3;
+    line-height: 3rem;
+}
+
+header p {
+    font-weight: lighter;
+    line-height: 1.5rem;
+}
+
+article>p {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+#what-is-cheese {
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+#cheese-definition {
+    line-height: 1.5rem;
+}
+
+#cheese-word-origin {
+    line-height: 1rem;
+    padding: 1rem .5rem;
+}
+
+.latin {
+    text-decoration: underline overline #7b6f19;
+    text-decoration-style: solid;
+}
+
+.cheese-families {
     line-height: var(--base-spacing);
+    font-size: 1.5rem;
+    font-family: var(--goofy-font);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--first-color)
+}
+
+.cheese-description {
+    font-family: var(--goofy-font);
+    line-height: var(--base-spacing);
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+dd+dt {
+    text-align: left;
+    text-wrap: pretty;
 }
 
 #warning {
-    background-color: var(--third-color);
+    line-height: var(--base-spacing);
+    background-color: #bb3e00;
     padding: 5%;
+}
+
+#blockquote {
+    background-color: var(--first-color);
+    color: var(--second-color);
 }
 
 #attributed {
