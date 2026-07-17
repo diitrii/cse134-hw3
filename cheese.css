@@ -1,11 +1,8 @@
 /* https://treecheese.netlify.app/ */
-:root {
-    --first-color: #ffb400;
-    --second-color: #fff1d7;
-    --base-spacing: 1.5rem;
-    --goofy-font: 'Comic Sans MS'
-}
+@import url("stinkycheese.css");
 
+/* <link> is still preferred because <link> loads stylesheets in parallel, whereas imports 
+are loaded like a "waterfall" effect that delays the page load */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -48,7 +45,7 @@ article>p {
 }
 
 .latin {
-    text-decoration: underline overline #7b6f19;
+    text-decoration: underline overline var(--third-color);
     text-decoration-style: solid;
 }
 
@@ -94,6 +91,40 @@ dt+dd {
     content: "\2014"
 }
 
+input[type="checkbox"]:focus {
+    accent-color: var(--third-color);
+    padding: .5em;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
 [type="text"] {
-    outline: 4rem #7b6f19;
+    outline: 4rem var(--third-color);
+}
+
+input[type="text"]:focus {
+    cursor: text;
+    color: #bb3e00
+}
+
+input[type="checkbox"]:checked+label {
+    font-weight: 600;
+    color: green;
+}
+
+#add-to-guide:hover {
+    cursor: pointer;
+}
+
+#cheese-society:focus {
+    color: blue;
+    text-decoration: underline;
+    scroll-behavior: smooth;
+}
+
+#cheese-society:hover {
+    cursor: pointer;
 }
