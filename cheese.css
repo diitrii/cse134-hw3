@@ -68,9 +68,10 @@ article>p {
     font-weight: lighter;
 }
 
-dd+dt {
+dt+dd {
     text-align: left;
     text-wrap: pretty;
+    color: #7b6f19;
 }
 
 #warning {
